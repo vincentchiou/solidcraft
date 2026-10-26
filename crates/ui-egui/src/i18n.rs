@@ -217,7 +217,7 @@ fn interpolate(template: &str, args: &[(&str, &str)]) -> String {
 thread_local! {
     // Helpers without an app reference share a render scope. Nested renders restore
     // their caller's locale; no owned language strings or persistent global setting.
-    static CURRENT: Cell<Locale> = const { Cell::new(Locale(&ENGLISH)) };
+    static CURRENT: Cell<Locale> = const { Cell::new(Locale(&CHINESE_TRADITIONAL)) };
 }
 
 #[must_use]
@@ -367,7 +367,7 @@ mod tests {
     /// are kept partial so a new label doesn't need more translations), so their gaps fall back
     /// to English and are reported by `cargo xtask i18n` without failing the build, while
     /// nothing in the complete catalogs may regress.
-    const COMPLETE: &[&str] = &["ja", "zh"];
+    const COMPLETE: &[&str] = &["ja", "zh", "zh-TW"];
 
     /// `text()` falls back to English silently, so a message a complete locale never received is
     /// shown in English inside an otherwise translated UI, with nothing in the build to say so.

@@ -283,6 +283,9 @@ pub fn is_cjk_font_name(file_name: &str) -> bool {
 /// separate from [`CJK_FONT_KEYWORDS`]: many Japanese fonts (Hiragino Gothic, Meiryo, Yu Gothic)
 /// match those but lack simplified characters, so a Chinese fallback searches these instead.
 pub const CHINESE_FONT_KEYWORDS: &[&str] = &[
+    "msjh",
+    "jhenghei",
+    "mingliu",
     "pingfang",
     "hiragino sans gb",
     "stheiti",
@@ -484,7 +487,9 @@ const THAI_FONT_CANDIDATES: &[&str] = &[
 /// Meiryo, Yu Gothic).
 #[cfg(not(target_arch = "wasm32"))]
 const CHINESE_FONT_CANDIDATES: &[&str] = &[
-    // Windows: Microsoft YaHei
+    // Windows: Microsoft JhengHei & Microsoft YaHei
+    "C:\\Windows\\Fonts\\msjh.ttc",
+    "C:\\Windows\\Fonts\\msjh.ttf",
     "C:\\Windows\\Fonts\\msyh.ttc",
     "C:\\Windows\\Fonts\\msyh.ttf",
     // macOS: PingFang SC, Hiragino Sans GB, Songti SC, STHeiti, Arial Unicode MS

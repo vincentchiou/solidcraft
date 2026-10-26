@@ -9,9 +9,14 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     }
     let out = std::path::PathBuf::from(std::env::var_os("OUT_DIR").ok_or("missing OUT_DIR")?);
     let copy = out.join("solidcraft.ico");
-    std::fs::copy(icon, &copy)?;
+    if let Err(e) = std::fs::copy(&icon, &copy) {
+        println!("cargo:warning=failed to copy icon: {e}");
+        return Ok(());
+    }
     let rc = out.join("solidcraft.rc");
-    std::fs::write(&rc, format!("1 ICON \"{}\"\n", copy.display().to_string().replace('\\', "/")))?;
-    embed_resource::compile_for(&rc, ["solidcraft"], embed_resource::NONE).manifest_required()?;
+    let _ = std::fs::write(&rc, "1 ICON \"solidcraft.ico\"\n");
+    if let Err(e) = embed_resource::compile_for(&rc, ["solidcraft"], embed_resource::NONE).manifest_required() {
+        println!("cargo:warning=failed to embed resource icon: {e}");
+    }
     Ok(())
 }
