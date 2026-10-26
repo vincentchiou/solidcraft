@@ -2,7 +2,16 @@
   <img src="assets/icons/app/linux/exports/hicolor/256x256/apps/ai.storyteller.solidcraft.png" width="96" height="96" alt="SolidCraft" />
 </p>
 
-<h1 align="center">SolidCraft</h1>
+<h1 align="center">SolidCraft (繁體中文版)</h1>
+
+> [!NOTE]
+> ### 📜 原專案出處與致謝 (Upstream Attribution & Credits)
+> - **Upstream Repository (原專案倉庫)**: [bherbruck/solidcraft](https://github.com/bherbruck/solidcraft) / [tangency-labs/solidcraft](https://github.com/tangency-labs/solidcraft)
+> - **Original Author & Contributors (原作者與社群)**: **bherbruck** and the SolidCraft open-source community
+> - **Official Website (官方網站)**: [https://solidcraft.io](https://solidcraft.io)
+> - **License (開源許可證)**: Dual-licensed under [Apache-2.0](LICENSE-APACHE) or [MIT](LICENSE-MIT)
+> - **繁體中文在地化說明**: 本版本基於原作者 bherbruck 釋出之 SolidCraft 開源專案進行繁體中文化與 Windows 獨立安裝包封裝，保留所有原專案版權與授權條款，特此向原作者及開源社群致敬！
+
 
 <p align="center">
   <strong>An open-source parametric 3D CAD application built in pure Rust.</strong><br />

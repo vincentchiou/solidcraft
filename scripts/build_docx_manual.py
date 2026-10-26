@@ -84,9 +84,11 @@ r_s.font.size = Pt(14)
 r_s.font.color.rgb = RGBColor(2, 132, 199)
 
 # Meta Table
-tbl_meta = doc.add_table(rows=4, cols=2)
+tbl_meta = doc.add_table(rows=6, cols=2)
 tbl_meta.alignment = WD_TABLE_ALIGNMENT.CENTER
 meta_data = [
+    ("原專案出處", "bherbruck/solidcraft (原創作者: bherbruck 與 SolidCraft Contributors)"),
+    ("官方網站", "https://solidcraft.io · 雙重開源授權 (Apache-2.0 / MIT)"),
     ("核心技術", "純 Rust 原生開發 · Truck B-Rep 幾何拓撲核心 · 零商業依賴"),
     ("語系標準", "100% 繁體中文全介面 · 台灣標準 CAD 工程術語 · 微軟正黑體優化"),
     ("硬體整合", "Bambu Lab A1 mini 3D 列印公差規格支援 · 輕量化拓撲結構"),
@@ -124,6 +126,8 @@ r.font.color.rgb = RGBColor(15, 23, 42)
 p = doc.add_paragraph()
 p.add_run("SolidCraft 是一款全新世代、乾淨架構（Clean-room）、純 Rust 語言打造的開源參數化 3D CAD 電腦輔助設計軟體。相較於依賴商業授權或老舊架構的傳統 CAD 工具，SolidCraft 具備極速啟動、記憶體安全保證、跨平台原生渲染以及強大的 AI 代理人驅動介面（Model Context Protocol）。")
 
+add_callout(doc, "本繁體中文維護版本源自國外優秀開源專案 bherbruck/solidcraft（GitHub 倉庫: https://github.com/bherbruck/solidcraft，官方網站: https://solidcraft.io），原創作者為 bherbruck 與廣大開源貢獻者，全案採用 Apache-2.0 / MIT 雙重自由開源授權。本專案致力於將原作者傑出的 Rust 參數化 CAD 成果引進台灣與繁體中文社群，特此對原創作者致以最崇高的敬意。", "原專案出處與致謝 (Credits & Attribution)", "F0F9FF", "0284C7")
+
 p = doc.add_paragraph()
 p.add_run("本專案已由工程團隊進行深度在地化調校，將全系統 3,142 條操作文字、圖表說明與選單標籤全部轉換為標準「台灣繁體中文」，並將所有幾何約束、特徵生成、歷史樹與檔案操作術語，嚴格依照台灣機械與工業設計慣用標準統一。")
 
@@ -146,7 +150,7 @@ r.font.name = "Microsoft JhengHei"
 r.font.color.rgb = RGBColor(2, 132, 199)
 
 p = doc.add_paragraph()
-p.add_run("• 安裝檔案：SolidCraft-v0.22.1-繁體中文安裝檔.exe\n"
+p.add_run("• 安裝檔案：SolidCraft-v0.22.1-zh-TW-Setup.exe\n"
           "• 特點：具備標準 Windows 繁體中文安裝精靈，自動將程式安裝至 Program Files、建立桌面捷徑與開始功能表捷徑，並自動將 solidcraft 與 solidcraft-cli 加入系統 PATH 環境變數，亦支援 .solidcraft 設計檔案關聯。")
 
 h2 = doc.add_heading(level=2)
@@ -155,7 +159,7 @@ r.font.name = "Microsoft JhengHei"
 r.font.color.rgb = RGBColor(2, 132, 199)
 
 p = doc.add_paragraph()
-p.add_run("• 封裝檔案：SolidCraft-v0.22.1-繁體中文免安裝版.zip\n"
+p.add_run("• 封裝檔案：SolidCraft-v0.22.1-zh-TW-Portable.zip\n"
           "• 特點：隨插即用，解壓縮至隨身碟或任意磁碟資料夾即可使用。內附「啟動SolidCraft.bat」與「一鍵建立桌面捷徑.bat」，適合校園電腦教室或無系統管理員權限之環境。")
 
 # ----------------- SECTION 3 -----------------

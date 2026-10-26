@@ -3,7 +3,7 @@
 
 #define MyAppName "SolidCraft 3D CAD"
 #define MyAppVersion "0.22.1"
-#define MyAppPublisher "SolidCraft Contributors"
+#define MyAppPublisher "bherbruck & SolidCraft Contributors"
 #define MyAppURL "https://github.com/bherbruck/solidcraft"
 #define MyAppExeName "solidcraft.exe"
 #define MyAppCliName "solidcraft-cli.exe"
